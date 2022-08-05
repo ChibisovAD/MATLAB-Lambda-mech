@@ -9,7 +9,7 @@ set(0,'defaultfigurecolor',[1 1 1])
 Load_mass = 1; % Payload mass (expressed in simulation as a point force applied to the end of segment BC)
 Sp_Stiff = 2.5; % Spring Stiffness of revolute joints
 
-%% I-PD-regulator сoefficients
+% I-PD-regulator сoefficients
 
 KIreg = 350; % I-component's gain сoefficient 
 KPDreg = 650; % PD-component's gain сoefficient 
