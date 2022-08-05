@@ -9,7 +9,7 @@ set(0,'defaultfigurecolor',[1 1 1])
 Load_mass = 1; % Payload mass (expressed in simulation as a point force applied to the end of segment BC)
 Sp_Stiff = 2.5; % Spring Stiffness of revolute joints
 
-%%I-PD-regulator сoefficients
+%% I-PD-regulator сoefficients
 
 KIreg = 350; % I-component's gain сoefficient 
 KPDreg = 650; % PD-component's gain сoefficient 
@@ -17,17 +17,17 @@ Ki = 5; % I-PD-regulator's integral сoefficient
 Kp = 0.9; % I-PD-regulator's proportional сoefficient 
 Kd = 0.1;% I-PD-regulator's derivative сoefficient 
 
-%Elements` size parametrs Determination
+% Elements` size parametrs Determination
 
 x_el = 5; % Taken just because, actually
 z_el = 5;
 a = 20; % a parametr from the task
 
-%Transmition`s starting state
+% Transmition`s starting state
 
 Dnst = 7800; % Mechanism`s material density (The approximate density of steel)
 Starting_deg = 0; % Initial condition of the O joint (Defined in terms of certanity)
-Imp_time = 4.7; % Control signal`s period (5 + 2 + (2 secs = settling time * 2))
+Imp_time = 4.7; % Control signal`s period (0.5 + 0.2 + (2 secs = settling time * 2))
 Pulse_Wdt = 100*2.5/4.7; % descent time to ascent time ratio
 
 %%%%%%  Simulation of a lambda mechanism %%%%%
@@ -37,7 +37,7 @@ Data = sim("Lambda_mech.slx",SimTime);
 
 %%%%%% Plotting %%%%%
 
-%Plotting the X-Y plot of a C point
+% Plotting the X-Y plot of a C point
 
 figure
 plot(Data.C_Data.X.Data,Data.C_Data.Z.Data,'LineWidth',3);
@@ -47,7 +47,7 @@ xlabel('X axis, meters')
 xlabel('Y axis, meters')
 grid on
 
-%Plotting point C`s velocity and Joint O`s angle graph
+% Plotting point C`s velocity and Joint O`s angle graph
 
 figure
 
